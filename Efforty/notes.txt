@@ -1,0 +1,30 @@
+﻿---------------------------------------------------------------------------------------------------------------------------------------------------------
+ÜBERSICHT
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--> Ziel: 
+Aufgaben tracken; Zeit + was man geschafft hat.
+
+--> Idee:
+3 Tabellen in SQLite:
+	- Tätigkeiten (ID, Name, Beschreibung); dient zum Aufaddieren gleicher Tätigkeiten
+	- Aufgaben (ID, Bezeichnung, Zwischenzeit, FK_TätigkeitenID); ausführbare Einheiten mit festem Bezug zu einer Tätigkeit. Messen Zeit.
+	- Ergebnisse (ID, Tätigkeit, Dauer, Ergebnis); speichern die Dauer und das Ergebnis nach Beenden einer Aufgabe
+
+--> Ansätze:
+- man legt Tätigkeiten an (damit sie statistisch erfasst und zusammengefasst werden können)
+- man legt Aufgaben mit Bezug zu einer Tätigkeit an
+	- Aufgaben haben einen eindeutigen Namen
+	- Aufgaben können gestartet, pausiert und beendet werden
+- eine beendete Aufgabe speichert die Gesamtdauer (in HH:MM:SS) und das Ergebnis (geschaffte Einheiten von X) in die Ergebnisse; dann wird es gelöscht
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Todo Tracker
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+- Druckfunktion für Ausgabe
+- Überarbeitung komplett (Code)
+- GUI Aufbau?
+- Ausgabe-Anzeige?
